@@ -1,3 +1,4 @@
+
 const needle = require("needle");
 
 const fetchBreedDescription = (breedName, callback) => {
@@ -18,14 +19,5 @@ const fetchBreedDescription = (breedName, callback) => {
   });
 };
 
-const args = process.argv.slice(2);
-const breedName = args[0];
+module.exports = { fetchBreedDescription };
 
-// Fetch and display the breed description
-fetchBreedDescription(breedName, (error, description) => {
-  if (error) {
-    console.error("Error fetching breed description:", error);
-  } else {
-    console.log(description);
-  }
-});
